@@ -23,19 +23,19 @@ The workflow includes correlation analysis, Random Forest modeling, and feature 
 2. **Random Forest Modeling**  
    - Trains a **Random Forest Regressor** using 5-fold cross-validation.  
    - Computes R², RMSE, and out-of-fold (OOF) predictions for evaluation.  
-   - Generates **site-specific performance plots** (**Figure S2**).  
+   - Generates **site-specific performance plots** (**Figure S1**).  
 
 3. **Feature Interpretation**  
    - **Feature importance** comparison (Gini and permutation importance) → **Figure 3A**  
    - **SHAP values** for global interpretability → **Figure 3B**  
-   - **Partial dependence plots** (PDPs) for each feature → **Figure 4**  
+   - **Partial dependence plots** (PDPs) for each feature → **Figures 4 and S2**  
 
 ---
 
 ## Usage
 
-1. Place the `full_groundwater_dataset.csv` file in the repository directory.  
-2. Open the Jupyter Notebook and run all cells sequentially.  
+1. Ensure the `full_groundwater_dataset.csv` file downloaded from the repository is in the same folder as the `random_forest_model.ipynb` Python script.  
+2. Open the 'random_forest_model.ipynb' Jupyter Notebook file and run all cells sequentially.  
 3. Outputs generated:  
    - Correlation matrix and plots (Figure S3)  
    - Model performance metrics and site-specific plots (Figure S2)  
@@ -48,7 +48,6 @@ The workflow includes correlation analysis, Random Forest modeling, and feature 
 ## Requirements
 
 - **Python 3.8+**  
-- Jupyter Notebook  
 - Python packages:  
   ```bash
   pip install pandas numpy scikit-learn shap matplotlib seaborn scipy
