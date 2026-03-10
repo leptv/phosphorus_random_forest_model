@@ -1,116 +1,54 @@
-# README
+## Overview
 
-# Overview
+This repository contains a **Jupyter Notebook** implementing a Random Forest regression model accompanying the manuscript titled "...."  
+The notebook analyzes **hydrological and geochemical monitoring data** from porewater collected at two sites (North and West) along the Wisconsin Riverbank on Blackhawk Island.  
 
-# 
+The workflow includes correlation analysis, Random Forest modeling, and feature interpretability analyses.
 
-# This repository contains a Python script in Jupyter Notebook format that implements a Random Forest regression model accompanying the manuscript. The notebook is designed to analyze hydrological and geochemical monitoring data from porewater collected along the hyporheic zone at two sites (North and West) along the Wisconsin Riverbank on Blackhawk Island.
+---
 
-# 
+## Data Input
 
-# The notebook performs the following:
+- Input file: `full_groundwater_dataset.csv`  
+- Contents: Environmental monitoring data, including hydrological and geochemical measurements from the two sites.  
 
-# 
+---
 
-# Data Input:
+## Analysis Workflow
 
-# 
+1. **Correlation Analysis**  
+   - Computes pairwise correlations among all environmental features.  
+   - Generates **Figure S3** in the manuscript.  
 
-# Takes the file full\_groundwater\_dataset.csv as input.
+2. **Random Forest Modeling**  
+   - Trains a **Random Forest Regressor** using 5-fold cross-validation.  
+   - Computes R², RMSE, and out-of-fold (OOF) predictions for evaluation.  
+   - Generates **site-specific performance plots** (**Figure S2**).  
 
-# 
+3. **Feature Interpretation**  
+   - **Feature importance** comparison (Gini and permutation importance) → **Figure 3A**  
+   - **SHAP values** for global interpretability → **Figure 3B**  
+   - **Partial dependence plots** (PDPs) for each feature → **Figure 4**  
 
-# This file contains environmental monitoring data, including hydrological and geochemical measurements from the two sites from 2023-2025.
+---
 
-# 
+## Usage
 
-# Data Analysis:
+1. Place the `full_groundwater_dataset.csv` file in the repository directory.  
+2. Open the Jupyter Notebook and run all cells sequentially.  
+3. Outputs generated:  
+   - Correlation matrix and plots (Figure S3)  
+   - Model performance metrics and site-specific plots (Figure S2)  
+   - Feature importance comparison (Figure 3A)  
+   - SHAP summary plots (Figure 3B)  
+   - Partial dependence plots for each feature (Figure 4)  
 
-# 
+---
 
-# Conducts correlation analysis among all environmental features, generating Figure S3 in the manuscript.
+## Requirements
 
-# 
-
-# Random Forest Modeling:
-
-# 
-
-# Trains a Random Forest Regressor using 5-fold cross-validation.
-
-# 
-
-# Evaluates model performance, computing R², RMSE, and out-of-fold predictions.
-
-# 
-
-# Generates site-specific performance plots (Figure S2).
-
-# 
-
-# Feature Interpretation:
-
-# 
-
-# Calculates and visualizes feature importance (Figure 3A).
-
-# 
-
-# Computes SHAP values for interpretability (Figure 3B).
-
-# 
-
-# Generates partial dependence plots for each feature (Figure 4).
-
-# 
-
-# Usage
-
-# 
-
-# Place the full\_groundwater\_dataset.csv file in the working directory.
-
-# 
-
-# Open the Jupyter Notebook and run each cell sequentially.
-
-# 
-
-# The notebook will automatically produce:
-
-# 
-
-# Correlation matrix and plots (Figure S3).
-
-# 
-
-# Model performance metrics and plots per site (Figure S2).
-
-# 
-
-# Feature importance comparison plot (Figure 3A).
-
-# 
-
-# SHAP summary plots (Figure 3B).
-
-# 
-
-# Partial dependence plots (Figure 4).
-
-# 
-
-# Requirements
-
-# 
-
-# Python 3.8+
-
-# 
-
-# Jupyter Notebook
-
-# 
-
-# Packages: pandas, numpy, scikit-learn, shap, matplotlib, seaborn, scipy
-
+- **Python 3.8+**  
+- Jupyter Notebook  
+- Python packages:  
+  ```bash
+  pip install pandas numpy scikit-learn shap matplotlib seaborn scipy
