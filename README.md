@@ -35,7 +35,7 @@ The workflow includes correlation analysis, Random Forest modeling, and feature 
 ## Usage
 
 1. Ensure the `full_groundwater_dataset.csv` file downloaded from the repository is in the same folder as the `random_forest_model.ipynb` Python script.  
-2. Open the 'random_forest_model.ipynb' Jupyter Notebook file and run all cells sequentially.  
+2. Open the `random_forest_model.ipynb` Jupyter Notebook file and run all cells sequentially.  
 3. Outputs generated:  
    - Correlation matrix and plots (Figure S3)  
    - Model performance metrics and site-specific plots (Figure S2)  
